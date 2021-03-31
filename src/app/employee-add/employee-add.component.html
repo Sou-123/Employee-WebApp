@@ -1,0 +1,54 @@
+<div class="container">
+    <h4 class="modal-title" id="modal-basic-title">New Employee</h4><br>
+    <div>
+        <form [formGroup]="empForm" autocomplete=off>
+            <div class="form-group">
+                <label for="firstName">Firstname</label>
+                <div class="input-group">
+                    <input class="form-control" formControlName="firstName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Lastname</label>
+                <div class="input-group">
+                    <input formControlName="lastName" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="firstName">Dob</label>
+                <div class="input-group">
+                    <input class="form-control" type="date" formControlName="dob">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-group">
+                    <input formControlName="email" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Gender</label>
+                <div class="form-inline">
+                    <label><input type="radio" value="Male" formControlName="gender">Male &nbsp;&nbsp;</label>
+                    <label><input type="radio" value="Female" formControlName="gender">Female &nbsp;&nbsp;</label>
+                    <label><input type="radio" value="Others" formControlName="gender">Others &nbsp;&nbsp;</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="firstName">Password</label>
+                <div class="input-group">
+                    <input class="form-control" formControlName="password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="firstName">Confirm Password</label>
+                <div class="input-group">
+                    <input class="form-control" formControlName="confirmPassword">
+                </div>
+            </div>
+            <div class="border text-center">
+                <button data-dismiss="modal" class="btn btn-info" (click)="onSave()">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
